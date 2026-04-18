@@ -1,0 +1,284 @@
+@charset "UTF-8";
+
+/*==================
+自己紹介（写真・趣味）
+==================*/
+.about {
+    padding-top: var(--spacing-8);
+}
+
+.about-introduction {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--spacing-8);
+    margin: 0 8% var(--spacing-8);
+}
+
+/* 画像スライダー */
+.about-photo-slider-wrapper {
+    position: relative;
+    width: 50%;
+    aspect-ratio: 8 / 6;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.about-photo-slider {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.about-photo-slider img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+    z-index: 0;
+}
+
+.about-photo-slider img.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+.hover-zone {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    z-index: 3;
+}
+
+.left-zone {
+    left: 0;
+    cursor: url('../../img/_icon_left.svg') 16 16, auto;
+}
+
+.right-zone {
+    right: 0;
+    cursor: url('../../img/_icon_right.svg') 16 16, auto;
+}
+
+/* テキスト */
+.about-text {
+    width: 50%;
+}
+
+.about-text.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.about-text h2 {
+    font-size: var(--size-xl);
+    font-weight: normal;
+    margin-bottom: var(--spacing-4);
+}
+
+.introduction {
+    margin-bottom: var(--spacing-3);
+}
+
+.about-text p {
+    font-size: var(--size-md);
+}
+
+.about-text h3 {
+    font-size: var(--size-md);
+    font-weight: bold;
+    margin-bottom: var(--spacing-1);
+}
+
+.fade-step,
+.fade-photo {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1.5s ease;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/*==================
+きっかけ
+==================*/
+.about .about-details {
+    position: relative;
+    width: 100%;
+    height: 170vh;
+    margin-bottom: var(--spacing-8);
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-details .bg-grid {
+    position: absolute;
+    inset: 0;
+    background-image: url(../../img/grid_about.png);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 170vh;
+    flex-shrink: 0;
+}
+
+.bg-maru {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 68vw;
+    height: 68vw;
+    background-image: url(../../img/green_maru.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 2;
+}
+
+.about-text-box {
+    position: relative;
+    z-index: 3;
+    width: 60%;
+    padding: var(--spacing-4);
+    line-height: 3;
+    color: var(--text-color);
+}
+
+.about-text-box p {
+    font-size: var(--size-mdlg);
+}
+
+.about-text-box span {
+    background-color: #fff;
+    padding: 0 0.2em;
+}
+
+.fade-detail {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1s ease-out;
+}
+
+.fade-detail.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/*==================
+できること
+==================*/
+.skills {
+    margin: 0 10% var(--spacing-6);
+}
+
+.skills-wrapper {
+    margin-bottom: var(--spacing-8);
+}
+
+.skills__title {
+    font-size: var(--size-lg);
+    margin-bottom: var(--spacing-1);
+    position: relative;
+}
+
+.skills__title::after {
+    content: "";
+    display: block;
+    height: 1px;
+    background-color: var(--text-sub);
+    margin-top: var(--spacing-3);
+}
+
+.skills__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-4);
+    padding: var(--spacing-5) 0;
+    padding-left: var(--spacing-8);
+    font-size: var(--size-md);
+}
+
+.skills__item::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 90%;
+    height: 1px;
+    background-color: var(--text-sub);
+}
+
+.skills__label {
+    font-size: var(--size-md);
+    font-weight: bold;
+    width: var(--spacing-8);
+    flex-shrink: 0;
+}
+
+.skills__icons {
+    display: flex;
+    gap: var(--spacing-1);
+    align-items: center;
+}
+
+.skills__icons img {
+    height: auto;
+    width: var(--spacing-5);
+}
+
+.skills__text {
+    flex: 1;
+    font-size: var(--size-smd);
+    line-height: 1.8;
+}
+
+.fade-skill {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1s ease-out;
+}
+
+.fade-skill.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/*==================
+画像
+==================*/
+/* .image-pose {
+    background-image: url(../../img/yellow-flower.jpg);
+    height: 20vh;
+    position: center;
+} */
+
+/*==================
+大切にしている３つ
+==================*/
+.skills__label-num {
+    font-size: var(--size-xxl);
+    width: 10%;
+}
+
+.important-title {
+    font-weight: bold;
+    font-size: var(--size-md);
+    width: 22%;
+}
+
+

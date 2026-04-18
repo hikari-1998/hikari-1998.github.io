@@ -1,0 +1,178 @@
+@charset "UTF-8";
+
+.contact-title-wrapper {
+    text-align: center;
+    margin-bottom: var(--spacing-6);
+}
+
+.contact-title {
+    font-size: var(--size-xxxl);
+    font-weight: 500;
+}
+
+.contact-jp {
+    font-size: var(--size-mdlg);
+}
+
+.contact-section {
+    margin: var(--spacing-7) auto;
+    padding: 2rem;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: var(--spacing-3);
+    font-size: var(--size-md);
+    width: 100%;
+    color: black;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: var(--spacing-2);
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin: var(--spacing-1) 0;
+}
+
+.contact-form button {
+    background-color: #fff;
+    color: var(--main-color);
+    padding: 1.2rem 2rem;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    width: 100%;
+    max-width: 500px;
+    margin: var(--spacing-3) 0 auto;
+    font-size: var(--size-md);
+    border: 2px solid var(--main-color);
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.contact-form button:hover {
+    background-color: var(--main-color);
+    color: #fff;
+    border: 2px solid var(--main-color);
+}
+
+.contact-form span {
+    font-size: var(--size-xs);
+    color: rgb(173, 49, 49);
+}
+
+
+/* 確認ーーーーーーーーーーーーー */
+.confirm-area,
+.thanks-message-wrapper,
+#confirmArea {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: #fdfdfd;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.confirm-field {
+    text-align: left;
+    margin: 1.5rem var(--spacing-7);
+    font-size: var(--size-md);
+}
+
+.hidden {
+    display: none;
+}
+
+#confirmArea button {
+    background-color: #fff;
+    color: var(--main-color);
+    padding: var(--spacing-1) var(--spacing-3);
+    border: 2px solid var(--main-color);
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: var(--size-md);
+    font-weight: bold;
+    margin: 1rem 0.5rem;
+    transition: all 0.3s;
+}
+
+#confirmArea button:hover {
+    background-color: var(--main-color);
+    color: #fff;
+}
+
+#confirmArea h3 {
+    font-size: var(--size-lg);
+    margin-bottom: var(--spacing-5);
+}
+
+.button-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+#confirmArea #backButton {
+    font-size: var(--size-smd);
+    color: var(--text-color);
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    margin-bottom: var(--spacing-2);
+}
+
+#confirmArea #backButton:hover {
+    color: var(--text-sub);
+}
+
+#thankYouMessage {
+    text-align: center;
+}
+
+#thankYouMessage .thanks {
+    font-size: var(--size-lg);
+    margin-bottom: var(--spacing-2);
+    margin-top: var(--spacing-5);
+}
+
+#thankYouMessage p {
+    font-size: var(--size-md);
+    margin-bottom: var(--spacing-5);
+}
+
+.thanks-message-wrapper {
+    margin-bottom: var(--spacing-4);
+}
+
+/*==================
+つくったものに戻る
+==================*/
+.back-works {
+    text-align: center;
+    font-size: var(--size-lg);
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-1);
+    text-decoration: none;
+    color: inherit;
+}
+
+.back-icon {
+    width: 10%;
+    height: auto;
+}

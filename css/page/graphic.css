@@ -1,0 +1,19 @@
+@charset "UTF-8";
+.img-top-graphic-wrapper {
+    background: var(--bg-green);
+    height: 85vh;
+    margin-bottom: var(--spacing-4);
+}
+
+.img-top-graphic {
+    margin: 0 auto;
+    height: 85vh;
+    padding: var(--spacing-6);
+    object-fit: cover;
+}
+
+.summary-box {
+    margin: 0 14% var(--spacing-8);
+}
+
+

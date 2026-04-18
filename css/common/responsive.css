@@ -1,0 +1,592 @@
+/* ==================
+TOPーーーーーーーーーー
+================== */
+
+@media screen and (max-width:768px) {
+
+    /* ーーーーーーーーーーlogoーーーーーーーーーー */
+    .vertical_text {
+        font-size: var(--size-xs);
+    }
+
+    /* ーーーーーーーーーーmenuーーーーーーーーーー */
+    .menu {
+        display: none;
+    }
+
+    /* ーーーーーーーーーーメインコピーーーーーーーーーーー */
+    .main_copy {
+        writing-mode: vertical-rl;
+        height: 100vh;
+        width: auto;
+        top: 0;
+        left: auto;
+        right: calc(40vw - 5rem);
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .main_copy_wrapper {
+        flex-direction: column;
+        animation: loop-text-vertical 15s linear infinite;
+        min-height: 200%;
+    }
+
+    .double-content {
+        white-space: nowrap;
+        display: inline-block;
+        white-space: nowrap;
+        text-orientation: mixed;
+        line-height: 2;
+    }
+
+    @keyframes loop-text-vertical {
+        0% {
+            transform: translateY(0%);
+        }
+
+        100% {
+            transform: translateY(-50%);
+        }
+    }
+
+    /* ーーーーーーーーーースワイプーーーーーーーーーーー */
+    .container_swipe {
+        display: block;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .swipebar-group {
+        position: absolute;
+        bottom: 0;
+        right: var(--spacing-6);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .swipebar-text {
+        writing-mode: vertical-lr;
+        color: var(--text-white);
+        font-weight: 900;
+        font-size: var(--size-mdlg);
+        letter-spacing: 0.7em;
+        text-transform: uppercase;
+        margin-bottom: 0.5rem;
+        line-height: 1;
+        padding: var(--spacing-1) 0;
+    }
+
+    .swipebar-line {
+        width: 3px;
+        height: var(--spacing-8);
+        background: var(--accent-color);
+        animation: liner 2.5s cubic-bezier(1, 0, 0, 1) infinite;
+    }
+
+    @keyframes liner {
+        0% {
+            transform: scale(1, 0);
+            transform-origin: 0 0;
+        }
+
+        30% {
+            transform: scale(1, 1);
+            transform-origin: 0 0;
+        }
+
+        70% {
+            transform: scale(1, 1);
+            transform-origin: 0 100%;
+        }
+
+        100% {
+            transform: scale(1, 0);
+            transform-origin: 0 100%;
+        }
+    }
+
+    /* ーーーーーーーーーー⚪︎つくったもの⚪︎ーーーーーーーーーー */
+    .section-heading-wrapper .section-heading {
+        margin-bottom: var(--spacing-1);
+    }
+
+    .section-heading-wrapper .section-heading h2 {
+        margin: 0 var(--spacing-6);
+        font-size: var(--size-xxl);
+    }
+
+    /* ーーーーーーーーーーwork-boxーーーーーーーーーー */
+    .work-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .work-box {
+        width: 90%;
+    }
+
+    /* ーーーーーーーーーー吹き出しーーーーーーーーーー */
+    .speech-wrap {
+        display: none;
+    }
+
+    .speech-wrap-right {
+        display: none;
+    }
+
+    /* ーーーーーーーーーープレビューーーーーーーーーーー */
+    .modal .modal-wrapper {
+        width: 80vw;
+        margin: 0 auto;
+
+        transform: translateY(-200%);
+    }
+
+    .modal .modal-content-web img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .modal .modal-content-web {
+        display: block;
+        width: 80vw;
+        margin: 0 auto;
+        padding-top: var(--spacing-4);
+    }
+
+    .modal .modal-open-button {
+        bottom: calc(var(--preview-size) * 0.8);
+        left: -4rem;
+        transform: none;
+    }
+
+    /* プレビューspーーーーーーーーーーーーーーーー */
+    #modal-web1-sp .modal-wrapper,
+    #modal-web3-sp .modal-wrapper,
+    #modal-web4-sp .modal-wrapper,
+    #modal-web5-sp .modal-wrapper,
+    #modal-web6-sp .modal-wrapper,
+    #modal-web6 .modal-wrapper,
+    #modal-web7-sp .modal-wrapper,
+    #modal-web7 .modal-wrapper,
+    #modal-graphic8 .modal-wrapper {
+        width: 100vw;
+        margin: 0 auto;
+        transform: translateY(-200%);
+    }
+
+    #modal-web1-sp.modal.show .modal-wrapper,
+    #modal-web3-sp.modal.show .modal-wrapper,
+    #modal-web4-sp.modal.show .modal-wrapper,
+    #modal-web5-sp.modal.show .modal-wrapper,
+    #modal-web6-sp.modal.show .modal-wrapper,
+    #modal-web6.modal.show .modal-wrapper,
+    #modal-web7-sp.modal.show .modal-wrapper,
+    #modal-web7.modal.show .modal-wrapper,
+    #modal-graphic8.modal.show .modal-wrapper {
+        transform: translateY(0%);
+    }
+
+    #modal-web1-sp .modal-content-web,
+    #modal-web3-sp .modal-content-web,
+    #modal-web4-sp .modal-content-web,
+    #modal-web5-sp .modal-content-web,
+    #modal-web6-sp .modal-content-web,
+    #modal-web6 .modal-content-web,
+    #modal-web7-sp .modal-content-web,
+    #modal-web7 .modal-content-web,
+    #modal-graphic8 .modal-content-web {
+        width: 100%;
+        padding-top: var(--spacing-3);
+        text-align: center;
+    }
+
+    #modal-web1-sp .modal-content-web img,
+    #modal-web3-sp .modal-content-web img,
+    #modal-web4-sp .modal-content-web img,
+    #modal-web5-sp .modal-content-web img,
+    #modal-web6-sp .modal-content-web img,
+    #modal-web6 .modal-content-web img,
+    #modal-web7-sp .modal-content-web img,
+    #modal-web7 .modal-content-web img,
+    #modal-graphic8 .modal-content-web img {
+        max-width: 100%;
+        height: auto;
+        display: inline-block;
+    }
+
+    /* ーーーーーーーーーー私についてーーーーーーーーーー */
+    .about .about-content {
+        flex-direction: column;
+        height: auto;
+        gap: var(--spacing-6);
+        padding: 0 2rem;
+        ;
+    }
+
+    .about-photo-wrapper,
+    .about-texts {
+        width: 100%;
+        height: auto;
+    }
+
+    .about-texts {
+        text-align: center;
+        justify-content: center;
+    }
+
+    .about-title {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .name-ja,
+    .name-en {
+        position: static;
+        transform: none;
+        text-align: center;
+        margin-top: 1rem;
+    }
+
+    a:hover {
+        background: none;
+        color: inherit;
+        transform: none;
+    }
+
+    /*==================
+    work
+    ==================*/
+    /* プレビューセクションーーーーーーーー */
+    section .preview-section {
+        width: 50%;
+        height: clamp(16rem, 8rem + 16vw, 32rem);
+    }
+
+    /*==================
+    きっかけ
+    ==================*/
+    .about-details .bg-maru {
+        width: 95vw;
+        height: 95vw;
+    }
+
+    .about-details .about-text-box {
+        width: 70%;
+    }
+
+    /* できること */
+    .about .skills {
+        margin: 0 6% var(--spacing-6);
+    }
+
+
+    /*==================
+    graphic
+    ==================*/
+    main .img-top-graphic-wrapper {
+        background: var(--bg-green);
+        height: auto;
+        margin-bottom: var(--spacing-4);
+    }
+
+    main .img-top-graphic {
+        margin: 0 auto;
+        height: auto;
+        width: 100%;
+        padding: var(--spacing-6);
+        object-fit: cover;
+    }
+
+}
+
+
+@media screen and (max-width:520px) {
+
+    /*==================
+トップ
+==================*/
+    /* ーーーーーーーーーーロゴーーーーーーーーーー */
+    .logo .vertical_text {
+        font-size: var(--size-xxs);
+    }
+
+    .visual-wrap .vertical_text_en {
+        font-size: var(--size-sm);
+    }
+
+    /* モーダルーーーーーーーーーーー */
+    .modal-open-button {
+        bottom: calc(var(--preview-size) * 0.7);
+        left: -3rem;
+        transform: none;
+        width: clamp(7rem, 17.3vw, 10rem);
+        height: clamp(7rem, 17.3vw, 10rem);
+    }
+
+    /* スワイプ */
+    .swipebar-group {
+        right: var(--spacing-5);
+    }
+
+    /*==================
+work
+==================*/
+
+    section .heading-wrapper {
+        align-items: flex-start;
+        gap: var(--spacing-2);
+    }
+
+    .heading-wrapper .left-side {
+        width: 70%;
+    }
+
+    .heading-wrapper .right-side {
+        flex-direction: column;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .right-side .sp {
+        display: none;
+    }
+
+    /* 制作概要------------------ */
+
+    section .summary-box h2 {
+        font-size: var(--size-lg);
+    }
+
+    section .summary-box p {
+        font-size: var(--size-md);
+    }
+
+    /* 画像ーーーーーーーーーーーーーー */
+    section .top-img-frame {
+        height: auto;
+        margin: 0;
+    }
+
+    .top-img-frame .img-break {
+        padding: 0;
+        margin-bottom: var(--spacing-6);
+        width: 100vw;
+        height: auto;
+    }
+
+    /* 課題〜制作期間ーーーーーーーーー */
+    .works__list .works__column {
+        display: block;
+        text-align: center;
+    }
+
+    .works__list .works__topic {
+        margin-bottom: var(--spacing-2);
+        font-size: var(--size-lg);
+    }
+
+    .works__list .works__txt {
+        width: 100%;
+        text-align: left;
+        font-size: var(--size-md);
+    }
+
+    /* プレビューセクションーーーーーーーー */
+    section .preview-section {
+        width: 75%;
+        height: clamp(16rem, 8rem + 16vw, 32rem);
+    }
+
+    /*==================
+about
+==================*/
+    /* 自己紹介 */
+    .about .about-introduction {
+        display: block;
+    }
+
+    .about .about-photo-slider-wrapper {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+        margin-bottom: var(--spacing-6);
+    }
+
+    .about .about-introduction .about-photo-slider {
+        width: 100%;
+        aspect-ratio: 4 / 3;
+    }
+
+    .about .about-introduction .about-photo-slider img {
+        object-fit: cover;
+    }
+
+    .about .hover-zone {
+        width: 50%;
+        height: 100%;
+    }
+
+    .about .left-zone {
+        cursor: url('left-icon.svg') 8 8, auto;
+    }
+
+    .about .right-zone {
+        cursor: url('right-icon.svg') 8 8, auto;
+    }
+
+    .about .about-text {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .about-text .introduction {
+        margin-bottom: var(--spacing-4);
+    }
+
+    .about-text .introduction,
+    .about-text .about-fun {
+        font-size: var(--size-mdlg);
+    }
+
+    .about-introduction .about-text h3 {
+        font-size: var(--size-mdlg);
+    }
+
+    /*==================
+きっかけ
+==================*/
+    .about .about-details {
+        height: auto;
+        overflow-x: hidden;
+    }
+
+    .about-details .bg-grid {
+        height: 100vh;
+    }
+
+    .about-details .bg-maru {
+        width: 230vw;
+        height: 230vw;
+        top: 85%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+    }
+
+    .about-details .about-text-box {
+        line-height: 2.6;
+        width: 95%;
+    }
+
+    .about-details .about-text-box p {
+        font-size: var(--size-lg);
+    }
+
+
+    /*==================
+    できること
+    ==================*/
+
+    .skills-wrapper .skills__title {
+        text-align: center;
+        font-size: var(--size-xl);
+        background-color: var(--bg-green);
+        line-height: 1;
+    }
+
+    .skills-wrapper .skills__item {
+        flex-direction: column;
+        align-items: center;
+        padding-left: 0;
+    }
+
+    .skills-wrapper .skills__title::after {
+        content: "";
+        display: block;
+        height: 1px;
+        background-color: var(--text-sub);
+        margin-top: 0;
+    }
+
+    .skills-wrapper .skills__label {
+        width: auto;
+        font-size: var(--size-xl);
+    }
+
+    .skills-wrapper .skills__icons {
+        flex-wrap: wrap;
+    }
+
+    .skills-wrapper .skills__icons img {
+        width: var(--spacing-7);
+    }
+
+    .skills-wrapper .skills__text {
+        font-size: var(--size-mdlg);
+    }
+
+    .skills-wrapper .skills__item::after {
+        width: 100%;
+    }
+
+    /* 私が大切にしている３つのこと */
+    .skills-wrapper--important .skills__item {
+        gap: 0;
+        padding: 0;
+    }
+
+    .skills__item .skills__label-num {
+        font-size: 7.2rem;
+        text-align: center;
+        width: 100%;
+    }
+
+    .skills__item .important-title {
+        width: 90%;
+        font-size: var(--size-lg);
+        text-align: center;
+        margin-bottom: var(--spacing-4);
+    }
+
+    .skills__text--important {
+        font-size: var(--size-md);
+        padding-bottom: var(--spacing-5);
+
+    }
+
+    /* web1 中間画像 */
+    section .img-break-wrapper-flex {
+        display: block;
+    }
+
+    section .img-one-wrapper {
+        width: 100%;
+    }
+
+    section .img-two-wrapper {
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width:320px) {
+
+    /*==================
+    きっかけ
+    ==================*/
+    .about-details .bg-maru {
+        width: 300vw;
+        height: 300vw;
+        top: 95%;
+    }
+
+    .about .about-details .about-text-box p {
+        font-size: var(--size-mdlg);
+    }
+}
+
+/*==========max-width:320px==========*/

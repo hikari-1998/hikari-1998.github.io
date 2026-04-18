@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>くぼ ひかり｜contact</title>
+    <link rel="stylesheet" href="../css/common/reset.css">
+    <link rel="stylesheet" href="../css/common/common.css">
+    <link rel="stylesheet" href="../css/page/contact.css">
+    <link rel="stylesheet" href="../css/common/under.css">
+    <link rel="stylesheet" href="../css/common/responsive.css?v=1.0.4">
+</head>
+
+<body>
+    <!-- header -->
+    <header id="header">
+        <div class="header-left">
+            <a href="../index.html">
+                <img src="../img/logo.svg" alt="HIKARI Logo" class="logo-svg">
+                <div class="logo-texts">
+                    <div class="logo-name-ja">くぼ <br>ひかり</div>
+                    <div class="logo-name-en">Hikari Kubo</div>
+            </a>
+        </div>
+        </div>
+        <button class="hamburger" aria-label="メニューを開く">
+            <span></span>
+            <span></span>
+        </button>
+        <nav class="header-nav">
+            <a href="../index.html">home</a>
+            <a href="../index.html#works">works</a>
+            <a href="../about/index.html">about</a>
+        </nav>
+    </header>
+    <section class="contact-section">
+        <div class="contact-title-wrapper">
+            <h2 class="contact-title">Contact</h2>
+            <p class="contact-jp">お問い合わせ</p>
+        </div>
+        <form id="contactForm" class="contact-form">
+            <label>
+                お名前 <span>※必須</span><br>
+                <input type="text" name="name" required>
+            </label>
+
+            <label>
+                メールアドレス <span>※必須</span><br>
+                <input type="email" name="email" required>
+            </label>
+
+            <label>
+                お問い合わせ内容 <span>※必須</span><br>
+                <textarea name="message" rows="5" required></textarea>
+            </label>
+
+            <button type="submit">確認する</button>
+        </form>
+
+        <!-- 確認画面 -->
+        <div id="confirmArea" class="hidden">
+            <h3>確認画面</h3>
+            <div class="confirm-field"><strong>お名前：</strong><span id="confirmName"></span></div>
+            <div class="confirm-field"><strong>メール：</strong><span id="confirmEmail"></span></div>
+            <div class="confirm-field"><strong>お問い合わせ：</strong><span id="confirmMessage"></span></div>
+            <div class="button-wrapper">
+                <a id="backButton">修正する</a>
+                <button id="submitButton">送信する</button>
+            </div>
+        </div>
+
+        <!-- 完了画面 -->
+        <div id="thankYouMessage" class="hidden">
+            <div class="thanks-message-wrapper">
+                <h3 class="thanks">お問い合わせありがとうございます</h3>
+                <p class="thanks-message">内容を確認のうえ、ご連絡いたします。</p>
+            </div>
+            <div class="back-works fade-work">
+                <a href="../index.html" class="back-link">
+                    <img src="../img/icon_back.svg" alt="戻るアイコン" class="back-icon">
+                    <span class="fade-work">TOPにもどる</span>
+                </a>
+            </div>
+        </div>
+
+    </section>
+
+    <footer>
+        <div class="border1" data-index="0"></div>
+        <div class="border2" data-index="1"></div>
+        <div class="border3" data-index="2"></div>
+        <div class="border4" data-index="3"></div>
+        <div class="border1" data-index="4"></div>
+        <div class="border2" data-index="5"></div>
+        <div class="border3" data-index="6"></div>
+        <div class="border4" data-index="7"></div>
+        <div class="border1" data-index="8"></div>
+        <div class="border2" data-index="9"></div>
+        <div class="border3" data-index="10"></div>
+        <div class="border4" data-index="11"></div>
+
+        <div class="footer-wrapper">
+            <div class="footer-info">
+                <div class="contact-wrapper">
+                    <a class="contact" href="../contact/index.html">
+                        <h2>contact</h2>
+                    </a>
+                </div>
+                <div class="sns">
+                    <span class="x">X</span>
+                    <span class="x">note</span>
+                </div>
+            </div>
+            <div class="pankuzu">
+                <a href="../index.html">top</a><span>/</span>
+                <a href="../about/index.html">about</a><span>/</span>
+                <a href="../index.html#works">works</a>
+            </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-scrollify@1.0.20/jquery.scrollify.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>
